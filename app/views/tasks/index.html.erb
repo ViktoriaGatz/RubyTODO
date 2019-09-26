@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="index.css">
+<H1 align = center>Viktoria is beautiful!</H1>
+<table border = 1 align = center>
+<%= form_for @task do |f| %>
+	<tr>
+		<td><%= f.text_field :title %></td>
+	</tr>
+	<tr>
+		<td><%= f.text_area :text, size: "40x8" %></td>
+	</tr>
+	<tr>	
+		<td><%= f.submit "Add Task" %></td>
+	</tr>
+<% end %>
+
+<% @tasks.each do |t| %>
+        <%= t.title %>
+        <%= t.text %>
+<% end %>
